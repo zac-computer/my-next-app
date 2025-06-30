@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import Home from './page';
 
 describe('Home Page', () => {
-  it('renders the Next.js logo', () => {
+  it('renders the web app template logo', () => {
     render(<Home />);
-    const logo = screen.getByAltText('Next.js logo');
+    const logo = screen.getByAltText('Web App Template');
     expect(logo).toBeInTheDocument();
     expect(logo).toHaveAttribute('width', '180');
     expect(logo).toHaveAttribute('height', '38');
@@ -48,7 +48,7 @@ describe('Home Page', () => {
 
   it('renders the get started section', () => {
     render(<Home />);
-    const getStartedText = screen.getByText(/get started by editing/i);
+    const getStartedText = screen.getByText(/get started by customizing/i);
     expect(getStartedText).toBeInTheDocument();
 
     const codeElement = screen.getByText('src/app/page.tsx');

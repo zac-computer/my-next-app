@@ -9,13 +9,13 @@ test.describe('Home Page', () => {
     await expect(page).toHaveTitle(/Create Next App/);
   });
 
-  test('displays Next.js logo', async ({ page }) => {
-    const logo = page.getByAltText('Next.js logo');
+  test('displays web app template logo', async ({ page }) => {
+    const logo = page.getByAltText('Web App Template');
     await expect(logo).toBeVisible();
   });
 
   test('displays get started text', async ({ page }) => {
-    await expect(page.getByText('Get started by editing')).toBeVisible();
+    await expect(page.getByText('Get started by customizing')).toBeVisible();
     await expect(page.getByText('src/app/page.tsx')).toBeVisible();
   });
 

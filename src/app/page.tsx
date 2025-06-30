@@ -6,36 +6,36 @@ export default function Home() {
       <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
         <Image
           className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
+          src="/webapp.svg"
+          alt="Web App Template"
           width={180}
           height={38}
           priority
         />
         <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
           <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{' '}
+            Get started by customizing this template in{' '}
             <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
               src/app/page.tsx
             </code>
             .
           </li>
           <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
+            Build amazing web applications with this modern template.
           </li>
         </ol>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row">
           <a
             className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://vercel.com/new"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
               className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
+              src="/deploy.svg"
+              alt="Deploy icon"
               width={20}
               height={20}
             />
@@ -43,7 +43,7 @@ export default function Home() {
           </a>
           <a
             className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://nextjs.org/docs"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -54,7 +54,7 @@ export default function Home() {
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://nextjs.org/learn"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -69,7 +69,7 @@ export default function Home() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://vercel.com/templates?framework=next.js"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -84,7 +84,7 @@ export default function Home() {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://nextjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >

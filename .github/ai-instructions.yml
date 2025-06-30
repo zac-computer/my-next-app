@@ -1,0 +1,80 @@
+# GitHub AI Instructions
+# Configuration for GitHub's AI features (Copilot, code suggestions, etc.)
+
+project:
+  name: 'Next.js Production Template'
+  description: 'Enterprise-ready Next.js template with TypeScript, testing, and deployment infrastructure'
+  language: 'TypeScript'
+  framework: 'Next.js'
+
+guidelines:
+  code_style:
+    - 'Use TypeScript with strict mode and explicit types'
+    - 'Follow functional component patterns with proper TypeScript interfaces'
+    - 'Use Tailwind CSS with the cn() utility for conditional classes'
+    - 'Implement comprehensive testing for all new features'
+
+  architecture:
+    - 'Follow the API-first design with standardized responses'
+    - 'Use the withApiHandler() wrapper for all API routes'
+    - 'Validate inputs with Zod schemas'
+    - 'Centralize configuration in src/constants/index.ts'
+
+  testing:
+    - 'Create .test.tsx files alongside all components'
+    - 'Use React Testing Library for component tests'
+    - 'Write E2E tests for critical user flows'
+    - 'Maintain high test coverage standards'
+
+  security:
+    - 'Validate all user inputs'
+    - 'Use proper error handling patterns'
+    - 'Implement rate limiting for public endpoints'
+    - 'Never expose sensitive data in client code'
+
+patterns:
+  prefer:
+    - 'Functional components over class components'
+    - 'TypeScript interfaces over types for object shapes'
+    - 'Server Components where appropriate'
+    - 'Responsive design with Tailwind breakpoints'
+    - 'Proper error boundaries and loading states'
+
+  avoid:
+    - 'Any types in TypeScript'
+    - 'Inline styles instead of Tailwind'
+    - 'Direct DOM manipulation'
+    - 'Hardcoded configuration values'
+    - 'Missing error handling'
+
+file_conventions:
+  components: 'src/components/*.tsx with corresponding *.test.tsx'
+  api_routes: 'src/app/api/**/*.ts following Next.js App Router'
+  types: 'src/types/index.ts for shared interfaces'
+  utilities: 'src/lib/*.ts for reusable functions'
+  constants: 'src/constants/index.ts for configuration'
+  tests: '*.test.tsx for unit tests, e2e/*.spec.ts for E2E tests'
+
+commands:
+  development: 'pnpm dev'
+  build: 'pnpm build'
+  test: 'pnpm test'
+  lint: 'pnpm lint'
+  type_check: 'pnpm type-check'
+  quality_check: 'pnpm check'
+
+dependencies:
+  required:
+    - 'next@15.x'
+    - 'react@19.x'
+    - 'typescript@5.x'
+    - 'tailwindcss@4.x'
+    - 'zod@3.x'
+  testing:
+    - 'vitest@3.x'
+    - '@playwright/test@1.x'
+    - '@testing-library/react@16.x'
+  development:
+    - 'eslint@9.x'
+    - 'prettier@3.x'
+    - 'husky@9.x'

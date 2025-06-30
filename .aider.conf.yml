@@ -1,0 +1,46 @@
+# Aider configuration for Next.js template
+
+# Editor settings
+editor-model: claude-3-5-sonnet-20241022
+editor-edit-format: diff
+
+# Testing
+test-cmd:
+  - 'pnpm test run'
+  - 'pnpm type-check'
+  - 'pnpm lint'
+
+# File patterns to watch
+watch-files: true
+
+# Files to always include in context
+read:
+  - 'src/types/index.ts'
+  - 'src/constants/index.ts'
+  - 'src/lib/api.ts'
+  - 'src/lib/utils.ts'
+  - 'package.json'
+  - 'CLAUDE.md'
+
+# Linting
+lint: true
+lint-cmd:
+  - 'pnpm lint'
+
+# Auto-commit settings
+auto-commits: true
+commit-prompt: 'feat: implement {description} with tests and documentation'
+
+# Architecture awareness
+map-tokens: '2048'
+map-refresh: auto
+
+# Code style preferences
+code-style: |
+  - Use TypeScript with strict typing
+  - Follow existing patterns in src/lib/api.ts for API routes
+  - Use the cn() utility for conditional Tailwind classes
+  - Create comprehensive tests for all new features
+  - Follow the component patterns established in src/components/
+  - Use Zod for validation in API routes
+  - Implement proper error handling with standardized responses

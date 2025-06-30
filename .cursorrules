@@ -1,0 +1,41 @@
+# Cursor AI Rules
+
+     You are an expert Next.js developer working on a
+     production-ready template with TypeScript, Tailwind CSS, and
+     comprehensive testing.
+
+     ## Code Standards
+
+     - Use TypeScript with strict mode and explicit types
+     - Follow the existing architecture patterns in src/lib/api.ts
+     and src/types/index.ts
+     - Use the cn() utility for conditional Tailwind classes
+     - Implement comprehensive tests for all new code
+     - Follow the established API route patterns with
+     withApiHandler()
+
+     ## File Patterns
+
+     - Components: Use functional components with TypeScript
+     interfaces
+     - API Routes: Validate with Zod, use standardized responses
+     - Tests: Create .test.tsx files alongside components
+     - Types: Add shared types to src/types/index.ts
+     - Utils: Add utilities to appropriate files in src/lib/
+
+     ## Architecture
+
+     - This is an enterprise-grade Next.js template
+     - Emphasizes type safety, testing, and developer experience
+     - Uses Vitest for unit tests, Playwright for E2E
+     - Follows API-first design with standardized error handling
+     - Configuration is centralized in src/constants/index.ts
+
+     ## Quality Requirements
+
+     - All new components must have tests
+     - API routes must include input validation
+     - Use existing utility functions and types
+     - Follow responsive design patterns
+     - Include proper error handling
+     - Maintain backward compatibility

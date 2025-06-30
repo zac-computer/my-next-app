@@ -1,43 +1,38 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Component Tests', () => {
+// This is an example component test file
+// When you add interactive components to your app, you can write E2E tests here
+test.describe('Component Tests (Example)', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/test-components');
+    await page.goto('/');
   });
 
-  test('Button component interactions', async ({ page }) => {
-    // Initial state
-    const clickableButton = page.getByText(/Clicked \d+ times/);
-    await expect(clickableButton).toBeVisible();
-    await expect(clickableButton).toContainText('Clicked 0 times');
+  test('should have basic page functionality', async ({ page }) => {
+    // This is a placeholder test demonstrating how to test components
+    // Replace this with actual component tests when you add interactive components
 
-    // Click and verify counter updates
-    await clickableButton.click();
-    await expect(page.getByText('Clicked 1 times')).toBeVisible();
+    const logo = page.getByAltText('Web App Template');
+    await expect(logo).toBeVisible();
 
-    await page.getByText('Clicked 1 times').click();
-    await expect(page.getByText('Clicked 2 times')).toBeVisible();
-  });
-
-  test('Button variants display correctly', async ({ page }) => {
-    const primaryButton = page.getByRole('button', { name: /clicked/i });
-    const secondaryButton = page.getByRole('button', {
-      name: /secondary button/i,
-    });
-
-    await expect(primaryButton).toHaveClass(/bg-blue-500/);
-    await expect(secondaryButton).toHaveClass(/bg-gray-200/);
-  });
-
-  test('Disabled button cannot be clicked', async ({ page }) => {
-    const disabledButton = page.getByRole('button', {
-      name: /disabled button/i,
-    });
-
-    await expect(disabledButton).toBeDisabled();
-
-    // Verify the button truly can't be clicked
-    const isDisabled = await disabledButton.isDisabled();
-    expect(isDisabled).toBe(true);
+    const deployButton = page.getByText('Deploy now');
+    await expect(deployButton).toBeVisible();
   });
 });
+
+// Example test for future interactive components:
+// test.skip('Button component interactions (example)', async ({ page }) => {
+// Uncomment and modify when you have interactive components
+//
+// const clickableButton = page.getByRole('button', { name: /click me/i });
+// await expect(clickableButton).toBeVisible();
+// await clickableButton.click();
+// await expect(page.getByText('Button clicked!')).toBeVisible();
+// });
+
+// test.skip('Form submission (example)', async ({ page }) => {
+// Example test for form components
+//
+// await page.fill('input[name="email"]', 'test@example.com');
+// await page.click('button[type="submit"]');
+// await expect(page.getByText('Form submitted successfully')).toBeVisible();
+// });
