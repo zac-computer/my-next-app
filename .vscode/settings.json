@@ -1,0 +1,16 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "[tailwindcss]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    }
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

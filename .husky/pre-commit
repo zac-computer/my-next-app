@@ -1,0 +1,9 @@
+pnpm run format
+pnpm run type-check
+pnpm lint
+pnpm lint-staged
+pnpm run build
+pnpm test
+# .husky/pre-commit
+# prettier $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
+# git update-index --again
