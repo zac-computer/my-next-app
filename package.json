@@ -36,7 +36,8 @@
     "clean": "rm -rf .next out dist",
     "analyze": "cross-env ANALYZE=true next build",
     "check": "pnpm lint && pnpm type-check && pnpm test run",
-    "prepare": "husky"
+    "prepare": "husky",
+    "commit": "git diff --cached | claude -p \"Write a concise git commit message for these changes. Use conventional commit format (feat:, fix:, etc). Output only the commit message:\" | xargs -0 git commit -m"
   },
   "dependencies": {
     "clsx": "^2.1.1",
